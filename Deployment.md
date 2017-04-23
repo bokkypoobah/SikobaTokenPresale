@@ -1,6 +1,6 @@
 ## SikobaPresale.sol Deployment
 
-The SikobaPresale contract deployment process has just been separated into two parts.
+The SikobaPresale contract deployment process has just been separated into two parts - the first to deploy the contract and check the parameters, and the second to send the preallocation funding to the contract.
 
 This documents list the steps required to deploy this contract to Mainnet.
 
