@@ -62,7 +62,7 @@ contract Owned {
 
 /// ----------------------------------------------------------------------------------------
 /// @title Sikoba Presale Contract
-/// @author Roland Kofler, Alex Kampa, Bok 'Bokky Poo Bah' Khoo
+/// @author Roland Kofler, Alex Kampa, Bok 'BokkyPooBah' Khoo
 /// @dev Changes to this contract will invalidate any security audits done before.
 /// It is MANDATORY to protocol audits in the "Security reviews done" section
 ///  # Security checklists to use in each review:
@@ -159,7 +159,7 @@ contract SikobaPresale is Owned {
     ///         when calling this function to transfer the preallocation
     ///         funds into this contract. This can only be called once, after
     ///         deployment of this contract
-    function fundPreallocation() payable {
+    function fundPreallocation() payable onlyOwner {
         if (preallocationFunded) throw;
         assertEquals(TOTAL_PREALLOCATION, msg.value);
         preallocationFunded = true;
