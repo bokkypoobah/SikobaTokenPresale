@@ -3,7 +3,7 @@ pragma solidity ^0.4.8;
 /**
  * SIKOBA PRESALE CONTRACTS
  *
- * Version 0.1
+ * Version 0.2
  *
  * Author Roland Kofler, Alex Kampa, Bok 'BokkyPooBah' Khoo
  *
@@ -41,7 +41,8 @@ pragma solidity ^0.4.8;
 
 contract Owned {
     address public owner;
-
+    event OwnershipTransferred(address indexed _from, address indexed _to);
+ 
     function Owned() {
         owner = msg.sender;
     }
@@ -51,6 +52,11 @@ contract Owned {
             throw;
         }
         _;
+    }
+    
+    function transferOwnership(address newOwner) onlyOwner {
+        OwnershipTransferred(owner, newOwner);
+        owner = newOwner;
     }
 }
 
@@ -79,6 +85,8 @@ contract Owned {
 ///  Mar 13 2017 - Bok Khoo       - Made dates in comments consistent
 ///  Apr 05 2017 - Roland Kofler  - removed the necessity of presale end before withdrawing
 ///                                 thus price drops during presale can be mitigated
+///  Apr 23 2017 - Bok Khoo       - Version 0.2 Separate preallocation funding from
+///                                 deployment procedure, allow for transfer of owner
 /// ----------------------------------------------------------------------------------------
 contract SikobaPresale is Owned {
     // -------------------------------------------------------------------------------------
@@ -111,6 +119,7 @@ contract SikobaPresale is Owned {
 
     // Total preallocation in wei
     uint256 public constant TOTAL_PREALLOCATION = 15 wei;
+    bool public preallocationFunded;
 
     // Public presale period
     // Starts Apr 05 2017 @ 12:00pm (UTC) 2017-04-05T12:00:00+00:00 in ISO 8601
@@ -135,12 +144,25 @@ contract SikobaPresale is Owned {
     ///         deployment, so the preallocations will not be logged
     event LogParticipation(address indexed sender, uint256 value, uint256 timestamp);
 
-    function SikobaPresale () payable {
-        assertEquals(TOTAL_PREALLOCATION, msg.value);
+    /// @notice This contract is deployed with the preallocation accounts
+    ///         set up, and this balance is checked in the fundPreallocation()
+    ///         function when ethers matching the TOTAL_PREALLOCATION amount
+    ///         is sent to this contract
+    function SikobaPresale() {
         // Pre-allocations
         addBalance(0xdeadbeef, 10 wei);
         addBalance(0xcafebabe, 5 wei);
         assertEquals(TOTAL_PREALLOCATION, totalFunding);
+    }
+
+    /// @notice Ethers matching the TOTAL_PREALLOCATION amount must be sent
+    ///         when calling this function to transfer the preallocation
+    ///         funds into this contract. This can only be called once, after
+    ///         deployment of this contract
+    function fundPreallocation() payable {
+        if (preallocationFunded) throw;
+        assertEquals(TOTAL_PREALLOCATION, msg.value);
+        preallocationFunded = true;
     }
 
     /// @notice A participant sends a contribution to the contract's address
