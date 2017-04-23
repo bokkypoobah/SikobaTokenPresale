@@ -8,7 +8,7 @@ This documents list the steps required to deploy this contract to Mainnet.
 
 <hr />
 
-## Steps Before Deployment Of The Contract To Mainnet
+## Steps For Deployment Of SikobaPresale.sol To Mainnet
 
 * [] Update the contract parameters
   * [] Confirm MINIMUM_PARTICIPATION_AMOUNT and MAXIMUM_PARTICIPATION_AMOUNT below
