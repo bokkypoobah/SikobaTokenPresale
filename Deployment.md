@@ -28,7 +28,14 @@ This documents list the steps required to deploy this contract to Mainnet.
   * [] BK to call `transferOwnership(...)` with the parameter being account [0x9b3b0e006b0f840588DA04b9B05F5C378785bAf3](https://etherscan.io/address/0x9b3b0e006b0f840588DA04b9B05F5C378785bAf3)
   * [] AK/RK to check source code matches Github code
   * [] AK/RK to confirm that the owner account is correct
+  * [] BK/AK/RK to check the following contract parameters
+    * [] `PRESALE_START_DATE`
+    * [] `PRESALE_END_DATE`
+    * [] `OWNER_CLAWBACK_DATE`
+    * [] `totalFunding` matches `TOTAL_PREALLOCATION`
   * [] AK to call `fundPreallocation()`, sending the necessary ethers
+  * [] BK/AK/RK to check the following live contract parameters
+    * [] `preallocationFunded` must be true
 
 <br />
 
