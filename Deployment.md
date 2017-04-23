@@ -33,6 +33,7 @@ This documents list the steps required to deploy this contract to Mainnet.
     * [] `PRESALE_END_DATE`
     * [] `OWNER_CLAWBACK_DATE`
     * [] `totalFunding` matches `TOTAL_PREALLOCATION`
+    * [] Check a few of the preallocation balances
   * [] AK to call `fundPreallocation()`, sending the necessary ethers
   * [] BK/AK/RK to check the following live contract parameters
     * [] `preallocationFunded` must be true
