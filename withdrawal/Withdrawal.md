@@ -64,7 +64,7 @@ In Parity, select the **CONTRACTS** tab, click **+ WATCH**, select **Custom Cont
 ### Retrieve Your Contribution Balance
 
 * Select the newly watched SikobaPresale contract
-* Under the **QUERIES** enter the account you contributed from in the **balanceOf** field
+* Under **QUERIES** enter the account you contributed from in the **balanceOf** field
 * Copy the balance displayed
 
   ![](ParitySikobaPresaleCheckBalance-20170515-003737.png)
@@ -108,7 +108,6 @@ Select the **Contracts** tab. Then:
 
 ### Retrieve Your Contribution Balance
 
-* Select the newly watched SikobaPresale contract
 * Under **Read / Write Contract**, select **balanceOf** and enter the account you contributed from in the **address** field
 * Click **READ** and copy the balance displayed
 
@@ -117,29 +116,8 @@ Select the **Contracts** tab. Then:
 
 ### Execute Your Refund Withdrawal
 
-* At the top of the page, click on **> EXECUTE**
-* Select the account you contributed from under the **from account** label
-* Under **function to execute**, select **participantWithdrawIfMinimumFundingNotReached**
-* Paste the balance from the previous step under the **Value** label
+* Under **Read / Write Contract**, select **participantWithdrawIfMinimumFundingNotReached**
+* Paste the balance from the previous step under the **value** label
+* Select **Keystore File (UTC / JSON)**, **Select Your Wallet File**, enter your password and click **WRITE**
 
-  ![](ParitySikobaPresaleParticipantWithdraw-20170515-004136.png)
-
-* You should not get the warning message in orange - this is because these instructions are being prepared before the refunds are active
-* Click **POST TRANSACTION**
-* Enter your account password
-* Click **CONFIRM REQUEST**
-
-<br />
-
-<hr />
-
-## The Technical Bits
-
-To withdraw your refunds:
-
-* Watch the contract at address `0x812ade7bc90c34e8b2ca92590e525305c85f2d03` 
-* The Application Binary Interface follows:
-    > [{"constant":false,"inputs":[{"name":"value","type":"uint256"}],"name":"participantWithdrawIfMinimumFundingNotReached","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"TOTAL_PREALLOCATION","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MINIMUM_PARTICIPATION_AMOUNT","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"value","type":"uint256"}],"name":"ownerWithdraw","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_MINIMUM_FUNDING","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"OWNER_CLAWBACK_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_MAXIMUM_FUNDING","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MAXIMUM_PARTICIPATION_AMOUNT","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"ownerClawback","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_END_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_START_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalFunding","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":true,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":false,"name":"value","type":"uint256"},{"indexed":false,"name":"timestamp","type":"uint256"}],"name":"LogParticipation","type":"event"}]
-* Determine your balance executing the `balanceOf(...)` function with your contributing address as the parameter. The returned value will be in wei, e.g. 1000000000000000000 = 1 ETH.
-* Execute the `participantWithdrawIfMinimumFundingNotReached(...)` function with the parameters being the balance from the previous step, in wei.
-* Your contribution should then be refunded.
+  ![](MEWSikobaPresaleParticipantWithdraw-20170515-005813.png)
