@@ -63,7 +63,26 @@ In Parity, select the **CONTRACTS** tab, click **+ WATCH**, select **Custom Cont
 
 ### Retrieve Your Contribution Balance
 
+* Select the newly watched SikobaPresale contract
+* Under the **QUERIES** enter the account you contributed from in the **balanceOf** field
+* Copy the balance displayed
+
+  ![](ParitySikobaPresaleCheckBalance-20170515-003737.png)
+
+
 ### Execute Your Refund Withdrawal
+
+* At the top of the page, click on **> EXECUTE**
+* Select the account you contributed from under the **from account** label
+* Under **function to execute**, select **participantWithdrawIfMinimumFundingNotReached**
+* Paste the balance from the previous step under the **Value** label
+
+  ![](ParitySikobaPresaleParticipantWithdraw-20170515-004136.png)
+
+* You should not get the warning message in orange - this is because these instructions are being prepared before the refunds are active
+* Click **POST TRANSACTION**
+* Enter your account password
+* Click **CONFIRM REQUEST**
 
 <br />
 
