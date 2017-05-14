@@ -5,17 +5,17 @@ The SikobaPresale contract has been deployed to [0x812ade7bc90c34e8b2ca92590e525
 **Table of contents**
 
 * [To Withdraw Your Refunds Using Ethereum Wallet / Mist](#to-withdraw-your-refunds-using-ethereum-wallet--mist)
-  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
-  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
-  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
+  * Watch The SikobaPresale Contract
+  * Retrieve Your Contribution Balance
+  * Execute Your Refund Withdrawal
 * [To Withdraw Your Refunds Using Parity](#to-withdraw-your-refunds-using-parity)
-  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
-  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
-  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
+  * Watch The SikobaPresale Contract
+  * Retrieve Your Contribution Balance
+  * Execute Your Refund Withdrawal
 * [To Withdraw Your Refunds Using MyEtherWallet](#to-withdraw-your-refunds-using-myetherwallet)
-  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
-  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
-  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
+  * Watch The SikobaPresale Contract
+  * Retrieve Your Contribution Balance
+  * Execute Your Refund Withdrawal
 
 <br />
 
