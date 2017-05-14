@@ -2,6 +2,10 @@
 
 The SikobaPresale contract has been deployed to [0x812ade7bc90c34e8b2ca92590e525305c85f2d03](https://etherscan.io/address/0x812ade7bc90c34e8b2ca92590e525305c85f2d03). As the crowdfunding has not raised funds over the minimum, participants will need to withdraw their contributions from this contract. 
 
+<br />
+
+<hr />
+
 ## To Withdraw Your Refunds Using Ethereum Wallet / Mist
 
 ### Watch The SikobaPresale Contract
@@ -36,6 +40,34 @@ In Ethereum Wallet / Mist, select the **CONTRACTS** tab and click **WATCH CONTRA
 * Click **EXECUTE**
 * Enter your account password
 * Click **SEND TRANSACTION**
+
+<br />
+
+<hr />
+
+## To Withdraw Your Refunds Using Ethereum Wallet / Mist
+
+### Watch The SikobaPresale Contract
+
+In Parity, select the **CONTRACTS** tab, click **+ WATCH**, select **Custom Contract** and then click on **-> NEXT**. Then:
+
+* Under **network address**, enter `0x812ade7bc90c34e8b2ca92590e525305c85f2d03`
+* Under **contract name**, enter `SikobaPresale`
+* Copy the Application Binary Interface below and paste it into the **contract abi** text box
+
+  > [{"constant":false,"inputs":[{"name":"value","type":"uint256"}],"name":"participantWithdrawIfMinimumFundingNotReached","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"TOTAL_PREALLOCATION","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MINIMUM_PARTICIPATION_AMOUNT","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"value","type":"uint256"}],"name":"ownerWithdraw","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_MINIMUM_FUNDING","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"OWNER_CLAWBACK_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_MAXIMUM_FUNDING","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MAXIMUM_PARTICIPATION_AMOUNT","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"ownerClawback","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_END_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"PRESALE_START_DATE","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalFunding","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[],"payable":true,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"sender","type":"address"},{"indexed":false,"name":"value","type":"uint256"},{"indexed":false,"name":"timestamp","type":"uint256"}],"name":"LogParticipation","type":"event"}]
+
+* Click **+ ADD CONTRACT**
+
+  ![](ParitySikobaPresaleWatchContract-20170515-003236.png)
+
+### Retrieve Your Contribution Balance
+
+### Execute Your Refund Withdrawal
+
+<br />
+
+<hr />
 
 ## The Technical Bits
 
