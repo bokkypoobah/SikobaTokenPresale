@@ -1,6 +1,21 @@
 # How To Withdraw Your Presale Contribution From The SikobaPresale Contract
 
-The SikobaPresale contract has been deployed to [0x812ade7bc90c34e8b2ca92590e525305c85f2d03](https://etherscan.io/address/0x812ade7bc90c34e8b2ca92590e525305c85f2d03). As the crowdfunding has not raised funds over the minimum, participants will need to withdraw their contributions from this contract. 
+The SikobaPresale contract has been deployed to [0x812ade7bc90c34e8b2ca92590e525305c85f2d03](https://etherscan.io/address/0x812ade7bc90c34e8b2ca92590e525305c85f2d03). As the crowdfunding has not raised funds over the minimum, participants will need to withdraw their contributions from this contract.
+
+**Table of contents**
+
+* [To Withdraw Your Refunds Using Ethereum Wallet / Mist](#to-withdraw-your-refunds-using-ethereum-wallet--mist)
+  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
+  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
+  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
+* [To Withdraw Your Refunds Using Parity](#to-withdraw-your-refunds-using-parity)
+  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
+  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
+  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
+* [To Withdraw Your Refunds Using MyEtherWallet](#to-withdraw-your-refunds-using-myetherwallet)
+  * [Watch The SikobaPresale Contract](#watch-the-sikobapresale-contract)
+  * [Retrieve Your Contribution Balance](#retrieve-your-contribution-balance)
+  * [Execute Your Refund Withdrawal](#execute-your-refund-withdrawal)
 
 <br />
 
@@ -45,7 +60,7 @@ In Ethereum Wallet / Mist, select the **CONTRACTS** tab and click **WATCH CONTRA
 
 <hr />
 
-## To Withdraw Your Refunds Using Ethereum Wallet / Mist
+## To Withdraw Your Refunds Using Parity
 
 ### Watch The SikobaPresale Contract
 
