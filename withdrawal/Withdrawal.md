@@ -136,3 +136,7 @@ Select the **Contracts** tab. Then:
 * Select **Keystore File (UTC / JSON)**, **Select Your Wallet File**, enter your password and click **WRITE**
 
   ![](MEWSikobaPresaleParticipantWithdraw-20170515-005813.png)
+
+* If your transaction is failing, check to make sure that **Amount to Send** is set to zero, and **Gas Limit** is at least 40,000 
+
+  ![](MEWSikobaPresaleAmountToSend.png)
